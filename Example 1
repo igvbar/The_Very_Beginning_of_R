@@ -1,0 +1,54 @@
+R studio. Example #1 input/output
+
+# this is a comment
+# create R directory on the disk C, myrstudio, for example
+# create rscript directory , for example
+# script file  is a file containing R statements
+
+Open R Studio
+Click 
+File-> New File-> R script
+File->Save as
+
+#Keyboard Shortcuts
+#	  Ctrl+1 — Move focus to the Source Editor (script for example )
+#	  Ctrl+2 — Move focus to the Console
+#	  Ctrl+L — Clear the Console
+
+
+#in the script window type the  following:
+getwd()
+#and click run in the upper left corner
+#this is your working dir
+#(optional) to change the working dir type
+setwd(“~/myrstudio/rscript") 
+
+#type in the script editor
+2+2
+3*3
+sin(1)
+x<-1
+cat("the value of x is “, x , "\n")
+print("the value of x is ")
+print(x)
+#highlight and click run 
+#find output in the console window.
+#note the difference in cat and print commands
+
+#To define the direction of the output to file instead of terminal use the sink() function.
+#By default sink() overwrites existing file and there is no output to the terminal.
+#sink(“output script file”)
+## return output to the terminal 
+# sink()
+#To append output to the file and direct output both to the terminal and to the terminal use
+#sink(“output script file”, append=TRUE, split=TRUE)
+
+#So type in the script editor
+sink("output script file”)
+cos(pi)
+2^4
+#run and find the output file i.e. ‘output script file’, after that 
+#type sink(), to return to the terminal and type something like that:
+c<-2^14.76
+round(c,digits=2)
+signif(c,digits=2)
